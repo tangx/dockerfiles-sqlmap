@@ -1,0 +1,9 @@
+version: '3.1'
+
+services: 
+  sqlmap:
+    restart: always
+    image: sqlmap:latest
+    build: 
+      context: .
+      dockerifle: Dockerfile
