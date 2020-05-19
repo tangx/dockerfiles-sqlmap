@@ -6,4 +6,4 @@ services:
     image: sqlmap:latest
     build: 
       context: .
-      dockerifle: Dockerfile
+      dockerfile: Dockerfile
