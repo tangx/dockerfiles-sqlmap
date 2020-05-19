@@ -4,9 +4,9 @@ RUN apk add --no-cache git
 
 RUN mkdir -p /python \
       cd /python \
-    && git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git
+    && git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap
 
 WORKDIR /python/sqlmap
 
-ENTRYPOINT ["python", "sqlmap.py"]
+CMD ["python", "sqlmap.py"]
 
