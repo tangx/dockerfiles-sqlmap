@@ -6,7 +6,7 @@ RUN mkdir -p /python \
     && cd /python \
     && git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap
 
-WORKDIR /root
+WORKDIR /python/sqlmap
 
 ADD sqlmap.sh /usr/local/bin/sqlmap
 RUN chmod +x /usr/local/bin/sqlmap
