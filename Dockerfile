@@ -1,6 +1,11 @@
 FROM python:3.8.3-alpine
 
-RUN apk add --no-cache git
+RUN apk add --no-cache git \
+    bash \
+    wget \
+    curl \
+    ca-certificates
+
 
 RUN mkdir -p /python \
     && cd /python \
