@@ -9,8 +9,6 @@ services:
     volumes:
       - ./data/:/root/.local/:rw
       - ./target:/data/target:rw
-    ports:
-      - 30080:80
     command:
       - tail
       - -f
