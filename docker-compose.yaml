@@ -3,8 +3,12 @@ version: '3.1'
 services: 
   sqlmap:
     restart: always
+    network_mode: host
     image: tangx/sqlmap:latest
     volumes:
       - ./data/:/root/.local/:rw
       - ./target:/data/target:rw
-    network_mode: host
+    command:
+      - tail
+      - -f
+      - /dev/stdout
