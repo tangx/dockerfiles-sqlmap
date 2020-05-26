@@ -28,7 +28,9 @@ jobs:
 
     - name: use checkout
       uses:  actions/checkout@v2
-    - name: build and push
+    - name: build 
       run: |
         docker-compose -f docker-compose.yaml -f docker-compose.dev.yaml build
+    - name: build 
+      run: |
         docker-compose push
