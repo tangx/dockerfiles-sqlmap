@@ -16,3 +16,4 @@ WORKDIR /python/sqlmap
 ADD sqlmap.sh /usr/local/bin/sqlmap
 RUN chmod +x /usr/local/bin/sqlmap
 
+CMD ["/bin/bash"]

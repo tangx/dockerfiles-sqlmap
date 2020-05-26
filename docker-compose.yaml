@@ -4,6 +4,7 @@ services:
   sqlmap:
     restart: always
     image: tangx/sqlmap:latest
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    volumes:
+      - ./data/:/root/.local/:rw
+      - ./target:/data/target:rw
+    network_mode: host
