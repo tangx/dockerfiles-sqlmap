@@ -1,4 +1,4 @@
-FROM python:3.8.3-alpine
+FROM python:3.8.3-alpine as runner
 
 RUN apk add --no-cache git \
     bash \
@@ -15,9 +15,11 @@ RUN chmod +x /usr/local/bin/sqlmap \
 
 CMD ["/bin/bash"]
 
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+# RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 ## update
+
+FROM runner
 
 RUN mkdir -p /python \
     && cd /python \
