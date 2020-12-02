@@ -22,3 +22,5 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN mkdir -p /python \
     && cd /python \
     && git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap
+
+
